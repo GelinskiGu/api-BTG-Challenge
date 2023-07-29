@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/client/v1")
 public class ClientController {
@@ -18,8 +20,18 @@ public class ClientController {
         return service.create(client);
     }
 
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<ClientEntity> findAll()  {
+        return service.findAll();
+    }
+
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ClientEntity findById(@PathVariable(value = "id") Long id) {
         return service.findById(id);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public void delete(@PathVariable(value = "id") Long id) {
+        service.delete(id);
     }
 }

@@ -35,4 +35,14 @@ public class ClientService {
         return repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this ID"));
     }
+
+    // TODO: Implementar o update
+    public void delete(Long id) {
+        logger.info("Deleting one client!");
+
+        repository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("No records found for this ID"));
+
+        repository.deleteById(id);
+    }
 }
