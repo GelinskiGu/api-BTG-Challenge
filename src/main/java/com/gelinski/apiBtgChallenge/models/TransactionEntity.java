@@ -8,8 +8,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
 
-@Entity
-@Table(name = "transaction")
+@Entity(name = "transaction")
 public class TransactionEntity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;

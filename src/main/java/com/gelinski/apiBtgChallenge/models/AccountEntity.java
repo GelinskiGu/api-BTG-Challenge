@@ -9,8 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
-@Table(name = "account")
+@Entity(name = "account")
 public class AccountEntity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
