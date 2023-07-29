@@ -1,12 +1,9 @@
 package com.gelinski.apiBtgChallenge.models;
 
 import jakarta.persistence.*;
-import org.springframework.boot.context.properties.bind.DefaultValue;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -42,12 +39,12 @@ public class ClientEntity implements Serializable {
     private String neighborhood;
     @Column(name = "stateAddress", nullable = false, length = 2)
     private String stateAddress;
-    @Column(name = "CPF", nullable = false, length = 11)
-    private String CPF;
+    @Column(name = "cpf", nullable = false, length = 11)
+    private String cpf;
     @Column(name = "fullName", nullable = false, length = 255)
     private String fullName;
-    @Column(name = "CEP", nullable = false, length = 8)
-    private String CEP;
+    @Column(name = "cep", nullable = true, length = 8)
+    private String cep;
     @Column(name = "EUATaxAddress", nullable = true, length = 255)
     private String EUATaxAddress;
     @Column(name = "profession", nullable = false, length = 50)
@@ -75,7 +72,7 @@ public class ClientEntity implements Serializable {
     @Column(name = "frontPhotoDocument", nullable = false, length = 255)
     private String frontPhotoDocument;
     @Column(name = "dateBirth", nullable = false, length = 10)
-    private Date dateBirth;
+    private String dateBirth;
     @Column(name = "selfiePhoto", nullable = false, length = 255)
     private String selfiePhoto;
     @OneToMany(mappedBy = "client")
@@ -183,11 +180,11 @@ public class ClientEntity implements Serializable {
     }
 
     public String getCPF() {
-        return CPF;
+        return cpf;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCPF(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getFullName() {
@@ -199,11 +196,11 @@ public class ClientEntity implements Serializable {
     }
 
     public String getCEP() {
-        return CEP;
+        return cep;
     }
 
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
+    public void setCEP(String cep) {
+        this.cep = cep;
     }
 
     public String getEUATaxAddress() {
@@ -310,11 +307,11 @@ public class ClientEntity implements Serializable {
         this.frontPhotoDocument = frontPhotoDocument;
     }
 
-    public Date getDateBirth() {
+    public String getDateBirth() {
         return dateBirth;
     }
 
-    public void setDateBirth(Date dateBirth) {
+    public void setDateBirth(String dateBirth) {
         this.dateBirth = dateBirth;
     }
 
@@ -347,11 +344,11 @@ public class ClientEntity implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClientEntity that = (ClientEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(email, that.email) && Objects.equals(cellPhoneNumber, that.cellPhoneNumber) && Objects.equals(maritalStatus, that.maritalStatus) && Objects.equals(countryBirth, that.countryBirth) && Objects.equals(cityBirth, that.cityBirth) && Objects.equals(stateBirth, that.stateBirth) && Objects.equals(cityAddress, that.cityAddress) && Objects.equals(additionAddress, that.additionAddress) && Objects.equals(numberAddress, that.numberAddress) && Objects.equals(neighborhood, that.neighborhood) && Objects.equals(stateAddress, that.stateAddress) && Objects.equals(CPF, that.CPF) && Objects.equals(fullName, that.fullName) && Objects.equals(CEP, that.CEP) && Objects.equals(EUATaxAddress, that.EUATaxAddress) && Objects.equals(profession, that.profession) && Objects.equals(income, that.income) && Objects.equals(moveableAssets, that.moveableAssets) && Objects.equals(realEstateProperties, that.realEstateProperties) && Objects.equals(investments, that.investments) && Objects.equals(retirementFunds, that.retirementFunds) && Objects.equals(otherPatrimonies, that.otherPatrimonies) && Objects.equals(numberDocument, that.numberDocument) && Objects.equals(issuerDocument, that.issuerDocument) && Objects.equals(typeDocument, that.typeDocument) && Objects.equals(backPhotoDocument, that.backPhotoDocument) && Objects.equals(frontPhotoDocument, that.frontPhotoDocument) && Objects.equals(dateBirth, that.dateBirth) && Objects.equals(selfiePhoto, that.selfiePhoto) && Objects.equals(accounts, that.accounts) && Objects.equals(otherNationality, that.otherNationality);
+        return Objects.equals(id, that.id) && Objects.equals(email, that.email) && Objects.equals(cellPhoneNumber, that.cellPhoneNumber) && Objects.equals(maritalStatus, that.maritalStatus) && Objects.equals(countryBirth, that.countryBirth) && Objects.equals(cityBirth, that.cityBirth) && Objects.equals(stateBirth, that.stateBirth) && Objects.equals(cityAddress, that.cityAddress) && Objects.equals(additionAddress, that.additionAddress) && Objects.equals(numberAddress, that.numberAddress) && Objects.equals(neighborhood, that.neighborhood) && Objects.equals(stateAddress, that.stateAddress) && Objects.equals(cpf, that.cpf) && Objects.equals(fullName, that.fullName) && Objects.equals(cep, that.cep) && Objects.equals(EUATaxAddress, that.EUATaxAddress) && Objects.equals(profession, that.profession) && Objects.equals(income, that.income) && Objects.equals(moveableAssets, that.moveableAssets) && Objects.equals(realEstateProperties, that.realEstateProperties) && Objects.equals(investments, that.investments) && Objects.equals(retirementFunds, that.retirementFunds) && Objects.equals(otherPatrimonies, that.otherPatrimonies) && Objects.equals(numberDocument, that.numberDocument) && Objects.equals(issuerDocument, that.issuerDocument) && Objects.equals(typeDocument, that.typeDocument) && Objects.equals(backPhotoDocument, that.backPhotoDocument) && Objects.equals(frontPhotoDocument, that.frontPhotoDocument) && Objects.equals(dateBirth, that.dateBirth) && Objects.equals(selfiePhoto, that.selfiePhoto) && Objects.equals(accounts, that.accounts) && Objects.equals(otherNationality, that.otherNationality);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, cellPhoneNumber, maritalStatus, countryBirth, cityBirth, stateBirth, cityAddress, additionAddress, numberAddress, neighborhood, stateAddress, CPF, fullName, CEP, EUATaxAddress, profession, income, moveableAssets, realEstateProperties, investments, retirementFunds, otherPatrimonies, numberDocument, issuerDocument, typeDocument, backPhotoDocument, frontPhotoDocument, dateBirth, selfiePhoto, accounts, otherNationality);
+        return Objects.hash(id, email, cellPhoneNumber, maritalStatus, countryBirth, cityBirth, stateBirth, cityAddress, additionAddress, numberAddress, neighborhood, stateAddress, cpf, fullName, cep, EUATaxAddress, profession, income, moveableAssets, realEstateProperties, investments, retirementFunds, otherPatrimonies, numberDocument, issuerDocument, typeDocument, backPhotoDocument, frontPhotoDocument, dateBirth, selfiePhoto, accounts, otherNationality);
     }
 }
