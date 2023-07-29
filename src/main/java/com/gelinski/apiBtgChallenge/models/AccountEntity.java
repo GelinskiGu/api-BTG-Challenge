@@ -6,6 +6,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -36,6 +37,10 @@ public class AccountEntity implements Serializable {
     private Date openingDate = new Date();
     @Column(name = "status", nullable = false, length = 12)
     private String status;
+
+    // TODO: colocar algo para quando remover
+    @OneToMany(mappedBy = "account")
+    private List<TransactionEntity> transactions;
 
     public AccountEntity() {}
 
@@ -111,16 +116,24 @@ public class AccountEntity implements Serializable {
         this.status = status;
     }
 
+    public List<TransactionEntity> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<TransactionEntity> transactions) {
+        this.transactions = transactions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountEntity that = (AccountEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(client, that.client) && Objects.equals(bankNumber, that.bankNumber) && Objects.equals(accountNumber, that.accountNumber) && Objects.equals(branchNumber, that.branchNumber) && Objects.equals(typeAccount, that.typeAccount) && Objects.equals(balance, that.balance) && Objects.equals(openingDate, that.openingDate) && Objects.equals(status, that.status);
+        return Objects.equals(id, that.id) && Objects.equals(client, that.client) && Objects.equals(bankNumber, that.bankNumber) && Objects.equals(accountNumber, that.accountNumber) && Objects.equals(branchNumber, that.branchNumber) && Objects.equals(typeAccount, that.typeAccount) && Objects.equals(balance, that.balance) && Objects.equals(openingDate, that.openingDate) && Objects.equals(status, that.status) && Objects.equals(transactions, that.transactions);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, client, bankNumber, accountNumber, branchNumber, typeAccount, balance, openingDate, status);
+        return Objects.hash(id, client, bankNumber, accountNumber, branchNumber, typeAccount, balance, openingDate, status, transactions);
     }
 }
