@@ -58,7 +58,19 @@ public class AccountService {
         return AccountMapper.INSTANCE.entityToDTO(entity);
     }
 
-    // TODO: Implementar o update
+    public AccountDTOV1 update(AccountDTOV1 account) {
+        logger.info("Updating one account!");
+
+        AccountEntity entity = accountRepository.findById(account.getId()).orElseThrow(
+                () -> new ResourceNotFoundException("No records found for this account ID"));
+
+        entity.setStatus(account.getStatus());
+        entity.setTypeAccount(account.getTypeAccount());
+
+        AccountEntity savedEntity = accountRepository.save(entity);
+
+        return AccountMapper.INSTANCE.entityToDTO(savedEntity);
+    }
 
     public void delete(Long id) {
         logger.info("Deleting one account!");

@@ -30,6 +30,11 @@ public class AccountController {
         return service.findById(id);
     }
 
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public AccountDTOV1 update(@RequestBody AccountDTOV1 account) {
+        return service.update(account);
+    }
+
     @DeleteMapping(value = "/{id}")
     public void delete(@PathVariable(value = "id") Long id) {
         service.delete(id);
