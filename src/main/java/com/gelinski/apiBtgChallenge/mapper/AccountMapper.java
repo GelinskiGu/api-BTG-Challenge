@@ -14,7 +14,6 @@ public interface AccountMapper {
 
     AccountDTOV1 entityToDTO(AccountEntity accountEntity);
 
-    @Mapping(target = "id", ignore = true)
     AccountEntity dtoToEntity(AccountDTOV1 accountDTO);
 
     List<AccountDTOV1> mapToDTO(List<AccountEntity> accountEntities);

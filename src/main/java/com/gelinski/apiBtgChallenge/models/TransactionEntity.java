@@ -17,7 +17,7 @@ public class TransactionEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "account_id", nullable = false, referencedColumnName = "id")
     private AccountEntity account;
 

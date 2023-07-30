@@ -1,16 +1,12 @@
 package com.gelinski.apiBtgChallenge.services;
 
 import com.gelinski.apiBtgChallenge.data.dto.v1.AccountDTOV1;
-import com.gelinski.apiBtgChallenge.data.dto.v1.ClientDTOV1;
 import com.gelinski.apiBtgChallenge.data.dto.v1.TransactionDTOV1;
 import com.gelinski.apiBtgChallenge.exceptions.ResourceNotFoundException;
 import com.gelinski.apiBtgChallenge.mapper.AccountMapper;
-import com.gelinski.apiBtgChallenge.mapper.ClientMapper;
 import com.gelinski.apiBtgChallenge.mapper.TransactionMapper;
-import com.gelinski.apiBtgChallenge.models.AccountEntity;
 import com.gelinski.apiBtgChallenge.models.TransactionEntity;
 import com.gelinski.apiBtgChallenge.repositories.AccountEntityRepository;
-import com.gelinski.apiBtgChallenge.repositories.ClientEntityRepository;
 import com.gelinski.apiBtgChallenge.repositories.TransactionEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,9 +31,23 @@ public class TransactionService {
         AccountDTOV1 account = AccountMapper.INSTANCE.entityToDTO(accountRepository.findById(transaction.getAccountId()).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this account ID")));
 
+        if(transaction.getTransactionType().equals("D")) {
+            logger.info("Deposit transaction!");
+            account.setBalance(account.getBalance().add(transaction.getAmount()));
+        }
+        if(transaction.getTransactionType().equals("W")) {
+            logger.info("Withdraw transaction!");
+            logger.info(account.getBalance().toString());
+            logger.info(transaction.getAmount().toString());
+            account.setBalance(account.getBalance().subtract(transaction.getAmount()));
+        }
+
         List<TransactionEntity> transactions = account.getTransactions();
         transactions.add(entity);
         account.setTransactions(transactions);
+
+        logger.info("Novo saldo: " + account.getBalance().toString());
+
         accountRepository.save(AccountMapper.INSTANCE.dtoToEntity(account));
 
         TransactionEntity savedEntity = transactionRepository.save(entity);
