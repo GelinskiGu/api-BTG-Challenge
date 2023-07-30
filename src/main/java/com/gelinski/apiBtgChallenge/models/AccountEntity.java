@@ -37,7 +37,6 @@ public class AccountEntity implements Serializable {
     @Column(name = "status", nullable = false, length = 12)
     private String status;
 
-    // TODO: colocar algo para quando remover
     @OneToMany(mappedBy = "account")
     private List<TransactionEntity> transactions;
 
