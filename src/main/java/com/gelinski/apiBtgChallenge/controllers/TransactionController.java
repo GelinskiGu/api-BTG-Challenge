@@ -31,4 +31,9 @@ public class TransactionController {
         return service.findById(id);
     }
 
+    @GetMapping(value = "/account/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<TransactionDTOV1> findByAccountId(@PathVariable(value = "accountId") Long accountId) {
+        return service.findByAccountId(accountId);
+    }
+
 }

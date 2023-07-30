@@ -64,4 +64,15 @@ public class TransactionService {
         return TransactionMapper.INSTANCE.entityToDTO(entity);
     }
 
+    public List<TransactionDTOV1> findByAccountId(Long id) {
+        logger.info("Finding all transactions by account ID!");
+
+        List<TransactionEntity> transactions = transactionRepository.findByAccountId(id);
+        if(transactions.isEmpty()) {
+            throw new ResourceNotFoundException("No records found for this account ID");
+        }
+
+        return TransactionMapper.INSTANCE.mapToDTO(transactions);
+    }
+
 }
