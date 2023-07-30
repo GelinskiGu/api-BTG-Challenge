@@ -42,7 +42,46 @@ public class ClientService {
                 () -> new ResourceNotFoundException("No records found for this ID")));
     }
 
-    // TODO: Implementar o update
+    public ClientDTOV1 update(ClientDTOV1 clientDTO) {
+        logger.info("Updating one client!");
+
+        ClientEntity entity = repository.findById(clientDTO.getId()).orElseThrow(
+            () -> new ResourceNotFoundException("No records found for this ID"));
+
+        entity.setFullName(clientDTO.getFullName());
+        entity.setCep(clientDTO.getCep());
+        entity.setAdditionAddress(clientDTO.getAdditionAddress());
+        entity.setBackPhotoDocument(clientDTO.getBackPhotoDocument());
+        entity.setCellPhoneNumber(clientDTO.getCellPhoneNumber());
+        entity.setCityAddress(clientDTO.getCityAddress());
+        entity.setCityBirth(clientDTO.getCityBirth());
+        entity.setCountryBirth(clientDTO.getCountryBirth());
+        entity.setCpf(clientDTO.getCpf());
+        entity.setDateBirth(clientDTO.getDateBirth());
+        entity.setEmail(clientDTO.getEmail());
+        entity.setFrontPhotoDocument(clientDTO.getFrontPhotoDocument());
+        entity.setEUATaxAddress(clientDTO.getEUATaxAddress());
+        entity.setIncome(clientDTO.getIncome());
+        entity.setInvestments(clientDTO.getInvestments());
+        entity.setMaritalStatus(clientDTO.getMaritalStatus());
+        entity.setOtherNationality(clientDTO.getOtherNationality());
+        entity.setIssuerDocument(clientDTO.getIssuerDocument());
+        entity.setMoveableAssets(clientDTO.getMoveableAssets());
+        entity.setNeighborhood(clientDTO.getNeighborhood());
+        entity.setNumberAddress(clientDTO.getNumberAddress());
+        entity.setNumberDocument(clientDTO.getNumberDocument());
+        entity.setOtherPatrimonies(clientDTO.getOtherPatrimonies());
+        entity.setProfession(clientDTO.getProfession());
+        entity.setRealEstateProperties(clientDTO.getRealEstateProperties());
+        entity.setRetirementFunds(clientDTO.getRetirementFunds());
+        entity.setSelfiePhoto(clientDTO.getSelfiePhoto());
+        entity.setStateAddress(clientDTO.getStateAddress());
+        entity.setStateBirth(clientDTO.getStateBirth());
+        entity.setTypeDocument(clientDTO.getTypeDocument());
+
+        return ClientMapper.INSTANCE.entityToDTO(repository.save(entity));
+    }
+
     public void delete(Long id) {
         logger.info("Deleting one client!");
 

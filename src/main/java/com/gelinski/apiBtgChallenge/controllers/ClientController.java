@@ -30,6 +30,11 @@ public class ClientController {
         return service.findById(id);
     }
 
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ClientDTOV1 update(@RequestBody ClientDTOV1 client) {
+        return service.update(client);
+    }
+
     @DeleteMapping(value = "/{id}")
     public void delete(@PathVariable(value = "id") Long id) {
         service.delete(id);
