@@ -1,10 +1,13 @@
 package com.gelinski.apiBtgChallenge.services;
 
 import com.gelinski.apiBtgChallenge.data.dto.v1.AccountDTOV1;
+import com.gelinski.apiBtgChallenge.data.dto.v1.ClientDTOV1;
 import com.gelinski.apiBtgChallenge.exceptions.ResourceNotFoundException;
 import com.gelinski.apiBtgChallenge.mapper.AccountMapper;
+import com.gelinski.apiBtgChallenge.mapper.ClientMapper;
 import com.gelinski.apiBtgChallenge.models.AccountEntity;
 import com.gelinski.apiBtgChallenge.repositories.AccountEntityRepository;
+import com.gelinski.apiBtgChallenge.repositories.ClientEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +20,25 @@ public class AccountService {
     private final Logger logger = Logger.getLogger(AccountService.class.getName());
 
     @Autowired
-    AccountEntityRepository repository;
+    AccountEntityRepository accountRepository;
+
+    @Autowired
+    ClientEntityRepository clientRepository;
 
     public AccountDTOV1 create(AccountDTOV1 account) {
         logger.info("Creating one account!");
 
         AccountEntity entity = AccountMapper.INSTANCE.dtoToEntity(account);
-        AccountEntity savedEntity = repository.save(entity);
+
+        ClientDTOV1 client = ClientMapper.INSTANCE.entityToDTO(clientRepository.findById(account.getClientId()).orElseThrow(
+                () -> new ResourceNotFoundException("No records found for this client ID")));
+
+        List<AccountEntity> accounts = client.getAccounts();
+        accounts.add(entity);
+        client.setAccounts(accounts);
+        clientRepository.save(ClientMapper.INSTANCE.dtoToEntity(client));
+
+        AccountEntity savedEntity = accountRepository.save(entity);
 
         return AccountMapper.INSTANCE.entityToDTO(savedEntity);
     }
@@ -31,13 +46,13 @@ public class AccountService {
     public List<AccountDTOV1> findAll() {
         logger.info("Finding all accounts!");
 
-        return AccountMapper.INSTANCE.mapToDTO(repository.findAll());
+        return AccountMapper.INSTANCE.mapToDTO(accountRepository.findAll());
     }
 
     public AccountDTOV1 findById(Long id) {
         logger.info("Finding one account!");
 
-        AccountEntity entity = repository.findById(id).orElseThrow(
+        AccountEntity entity = accountRepository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this ID"));
 
         return AccountMapper.INSTANCE.entityToDTO(entity);
@@ -48,9 +63,9 @@ public class AccountService {
     public void delete(Long id) {
         logger.info("Deleting one account!");
 
-        repository.findById(id).orElseThrow(
+        accountRepository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this ID"));
 
-        repository.deleteById(id);
+        accountRepository.deleteById(id);
     }
 }

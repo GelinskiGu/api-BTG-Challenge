@@ -13,10 +13,8 @@ public interface ClientMapper {
 
     ClientMapper INSTANCE = Mappers.getMapper(ClientMapper.class);
 
-    @Mapping(target = "accounts", ignore = true)
     ClientDTOV1 entityToDTO(ClientEntity clientEntity);
 
-    @Mapping(target = "accounts", ignore = true)
     ClientEntity dtoToEntity(ClientDTOV1 clientDTO);
 
     List<ClientDTOV1> mapToDTO(List<ClientEntity> clientEntities);

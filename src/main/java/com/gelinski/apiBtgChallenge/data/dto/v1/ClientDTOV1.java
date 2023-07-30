@@ -1,6 +1,7 @@
 package com.gelinski.apiBtgChallenge.data.dto.v1;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.gelinski.apiBtgChallenge.models.AccountEntity;
 
 import java.io.Serial;
@@ -44,7 +45,7 @@ public class ClientDTOV1 implements Serializable {
     private String dateBirth;
     private String selfiePhoto;
     private String otherNationality;
-    @JsonIgnore
+    @JsonIgnoreProperties({"client", "transactions"})
     private List<AccountEntity> accounts;
 
     public ClientDTOV1() {}
