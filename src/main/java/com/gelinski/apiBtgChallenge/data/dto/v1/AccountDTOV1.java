@@ -1,6 +1,7 @@
 package com.gelinski.apiBtgChallenge.data.dto.v1;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.gelinski.apiBtgChallenge.models.ClientEntity;
 import com.gelinski.apiBtgChallenge.models.TransactionEntity;
@@ -29,7 +30,7 @@ public class AccountDTOV1 implements Serializable {
     private String status;
 
     // TODO: colocar algo para quando remover
-    @JsonIgnore
+    @JsonIgnoreProperties({"account", "clients"})
     private List<TransactionEntity> transactions;
 
     public AccountDTOV1() {}

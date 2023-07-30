@@ -3,7 +3,6 @@ package com.gelinski.apiBtgChallenge.mapper;
 import com.gelinski.apiBtgChallenge.data.dto.v1.ClientDTOV1;
 import com.gelinski.apiBtgChallenge.models.ClientEntity;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
