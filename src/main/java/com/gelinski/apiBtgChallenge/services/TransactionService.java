@@ -32,21 +32,15 @@ public class TransactionService {
                 () -> new ResourceNotFoundException("No records found for this account ID")));
 
         if(transaction.getTransactionType().equals("D")) {
-            logger.info("Deposit transaction!");
             account.setBalance(account.getBalance().add(transaction.getAmount()));
         }
         if(transaction.getTransactionType().equals("W")) {
-            logger.info("Withdraw transaction!");
-            logger.info(account.getBalance().toString());
-            logger.info(transaction.getAmount().toString());
             account.setBalance(account.getBalance().subtract(transaction.getAmount()));
         }
 
         List<TransactionEntity> transactions = account.getTransactions();
         transactions.add(entity);
         account.setTransactions(transactions);
-
-        logger.info("Novo saldo: " + account.getBalance().toString());
 
         accountRepository.save(AccountMapper.INSTANCE.dtoToEntity(account));
 
