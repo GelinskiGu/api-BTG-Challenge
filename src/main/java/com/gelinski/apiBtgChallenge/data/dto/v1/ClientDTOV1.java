@@ -3,11 +3,16 @@ package com.gelinski.apiBtgChallenge.data.dto.v1;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gelinski.apiBtgChallenge.models.AccountEntity;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
-public class ClientDTOV1 {
+public class ClientDTOV1 implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     private Long id;
     private String email;
     private String cellPhoneNumber;

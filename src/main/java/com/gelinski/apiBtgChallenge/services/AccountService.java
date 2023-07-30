@@ -1,6 +1,8 @@
 package com.gelinski.apiBtgChallenge.services;
 
+import com.gelinski.apiBtgChallenge.data.dto.v1.AccountDTOV1;
 import com.gelinski.apiBtgChallenge.exceptions.ResourceNotFoundException;
+import com.gelinski.apiBtgChallenge.mapper.AccountMapper;
 import com.gelinski.apiBtgChallenge.models.AccountEntity;
 import com.gelinski.apiBtgChallenge.repositories.AccountEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,23 +19,28 @@ public class AccountService {
     @Autowired
     AccountEntityRepository repository;
 
-    public AccountEntity create(AccountEntity account) {
+    public AccountDTOV1 create(AccountDTOV1 account) {
         logger.info("Creating one account!");
 
-        return repository.save(account);
+        AccountEntity entity = AccountMapper.INSTANCE.dtoToEntity(account);
+        AccountEntity savedEntity = repository.save(entity);
+
+        return AccountMapper.INSTANCE.entityToDTO(savedEntity);
     }
 
-    public List<AccountEntity> findAll() {
+    public List<AccountDTOV1> findAll() {
         logger.info("Finding all accounts!");
 
-        return repository.findAll();
+        return AccountMapper.INSTANCE.mapToDTO(repository.findAll());
     }
 
-    public AccountEntity findById(Long id) {
+    public AccountDTOV1 findById(Long id) {
         logger.info("Finding one account!");
 
-        return repository.findById(id).orElseThrow(
+        AccountEntity entity = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this ID"));
+
+        return AccountMapper.INSTANCE.entityToDTO(entity);
     }
 
     // TODO: Implementar o update

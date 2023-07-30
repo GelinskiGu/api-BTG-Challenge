@@ -1,5 +1,6 @@
 package com.gelinski.apiBtgChallenge.controllers;
 
+import com.gelinski.apiBtgChallenge.data.dto.v1.AccountDTOV1;
 import com.gelinski.apiBtgChallenge.models.AccountEntity;
 import com.gelinski.apiBtgChallenge.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +16,17 @@ public class AccountController {
     private AccountService service;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public AccountEntity create(@RequestBody AccountEntity account) {
+    public AccountDTOV1 create(@RequestBody AccountDTOV1 account) {
         return service.create(account);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<AccountEntity> findAll()  {
+    public List<AccountDTOV1> findAll()  {
         return service.findAll();
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public AccountEntity findById(@PathVariable(value = "id") Long id) {
+    public AccountDTOV1 findById(@PathVariable(value = "id") Long id) {
         return service.findById(id);
     }
 
