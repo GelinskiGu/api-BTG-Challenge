@@ -32,16 +32,14 @@ public class ClientService {
     public List<ClientDTOV1> findAll() {
         logger.info("Finding all clients!");
 
-        List<ClientEntity> clientEntities = repository.findAll();
-
-        return clientEntities.stream().map(ClientMapper.INSTANCE::entityToDTO).collect(Collectors.toList());
+        return ClientMapper.INSTANCE.mapToDTO(repository.findAll());
     }
 
-    public ClientEntity findById(Long id) {
+    public ClientDTOV1 findById(Long id) {
         logger.info("Finding one client!");
 
-        return repository.findById(id).orElseThrow(
-                () -> new ResourceNotFoundException("No records found for this ID"));
+        return ClientMapper.INSTANCE.entityToDTO(repository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("No records found for this ID")));
     }
 
     // TODO: Implementar o update

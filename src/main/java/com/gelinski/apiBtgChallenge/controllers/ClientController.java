@@ -1,7 +1,6 @@
 package com.gelinski.apiBtgChallenge.controllers;
 
 import com.gelinski.apiBtgChallenge.data.dto.v1.ClientDTOV1;
-import com.gelinski.apiBtgChallenge.models.ClientEntity;
 import com.gelinski.apiBtgChallenge.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -27,7 +26,7 @@ public class ClientController {
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ClientEntity findById(@PathVariable(value = "id") Long id) {
+    public ClientDTOV1 findById(@PathVariable(value = "id") Long id) {
         return service.findById(id);
     }
 

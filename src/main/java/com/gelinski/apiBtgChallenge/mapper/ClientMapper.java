@@ -6,6 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface ClientMapper {
 
@@ -16,5 +18,9 @@ public interface ClientMapper {
 
     @Mapping(target = "accounts", ignore = true)
     ClientEntity dtoToEntity(ClientDTOV1 clientDTO);
+
+    List<ClientDTOV1> mapToDTO(List<ClientEntity> clientEntities);
+
+    List<ClientEntity> mapToEntity(List<ClientDTOV1> clientDTOs);
 
 }
