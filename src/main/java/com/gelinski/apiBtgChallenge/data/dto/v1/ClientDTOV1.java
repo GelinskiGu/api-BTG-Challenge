@@ -1,87 +1,48 @@
-package com.gelinski.apiBtgChallenge.models;
+package com.gelinski.apiBtgChallenge.data.dto.v1;
 
-import jakarta.persistence.*;
-import java.io.Serial;
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.gelinski.apiBtgChallenge.models.AccountEntity;
+
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
-@Entity(name = "client")
-public class ClientEntity implements Serializable {
-
-    @Serial
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ClientDTOV1 {
     private Long id;
-
-    @Column(name = "email", nullable = false, length = 255)
     private String email;
-    @Column(name = "cellPhoneNumber", nullable = false, length = 15)
     private String cellPhoneNumber;
-    @Column(name = "maritalStatus", nullable = false, length = 10)
     private String maritalStatus;
-    @Column(name = "countryBirth", nullable = false, length = 50)
     private String countryBirth;
-    @Column(name = "cityBirth", nullable = false, length = 50)
     private String cityBirth;
-    @Column(name = "stateBirth", nullable = false, length = 2)
     private String stateBirth;
-    @Column(name = "cityAddress", nullable = false, length = 50)
     private String cityAddress;
-    @Column(name = "additionAddress", nullable = true, length = 50)
     private String additionAddress;
-    @Column(name = "numberAddress", nullable = false, length = 5)
     private String numberAddress;
-    @Column(name = "neighborhood", nullable = false, length = 50)
     private String neighborhood;
-    @Column(name = "stateAddress", nullable = false, length = 2)
     private String stateAddress;
-    @Column(name = "cpf", nullable = false, length = 11)
     private String cpf;
-    @Column(name = "fullName", nullable = false, length = 255)
     private String fullName;
-    @Column(name = "cep", nullable = true, length = 8)
     private String cep;
-    @Column(name = "EUATaxAddress", nullable = true, length = 255)
     private String EUATaxAddress;
-    @Column(name = "profession", nullable = false, length = 50)
     private String profession;
-    @Column(name = "income", nullable = false, length = 10)
     private BigDecimal income;
-    @Column(name = "moveableAssets", nullable = false)
     private BigDecimal moveableAssets = BigDecimal.ZERO;
-    @Column(name = "realEstateProperties", nullable = false)
     private BigDecimal realEstateProperties = BigDecimal.ZERO;
-    @Column(name = "investments", nullable = false)
     private BigDecimal investments = BigDecimal.ZERO;
-    @Column(name = "retirementFunds", nullable = false)
     private BigDecimal retirementFunds = BigDecimal.ZERO;
-    @Column(name = "otherPatrimonies", nullable = false)
     private BigDecimal otherPatrimonies = BigDecimal.ZERO;
-    @Column(name = "numberDocument", nullable = false, length = 11)
     private String numberDocument;
-    @Column(name = "issuerDocument", nullable = false, length = 255)
     private String issuerDocument;
-    @Column(name = "typeDocument", nullable = false, length = 3)
     private String typeDocument;
-    @Column(name = "backPhotoDocument", nullable = false, length = 255)
     private String backPhotoDocument;
-    @Column(name = "frontPhotoDocument", nullable = false, length = 255)
     private String frontPhotoDocument;
-    @Column(name = "dateBirth", nullable = false, length = 10)
     private String dateBirth;
-    @Column(name = "selfiePhoto", nullable = false, length = 255)
     private String selfiePhoto;
-    @OneToMany(mappedBy = "client")
-    private List<AccountEntity> accounts;
-    @Column(name = "otherNationality", nullable = true, length = 50)
     private String otherNationality;
+    @JsonIgnore
+    private List<AccountEntity> accounts;
 
-    public ClientEntity() {
-    }
+    public ClientDTOV1() {}
 
     public Long getId() {
         return id;
@@ -323,14 +284,6 @@ public class ClientEntity implements Serializable {
         this.selfiePhoto = selfiePhoto;
     }
 
-    public List<AccountEntity> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<AccountEntity> accounts) {
-        this.accounts = accounts;
-    }
-
     public String getOtherNationality() {
         return otherNationality;
     }
@@ -339,16 +292,24 @@ public class ClientEntity implements Serializable {
         this.otherNationality = otherNationality;
     }
 
+    public List<AccountEntity> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<AccountEntity> accounts) {
+        this.accounts = accounts;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ClientEntity that = (ClientEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(email, that.email) && Objects.equals(cellPhoneNumber, that.cellPhoneNumber) && Objects.equals(maritalStatus, that.maritalStatus) && Objects.equals(countryBirth, that.countryBirth) && Objects.equals(cityBirth, that.cityBirth) && Objects.equals(stateBirth, that.stateBirth) && Objects.equals(cityAddress, that.cityAddress) && Objects.equals(additionAddress, that.additionAddress) && Objects.equals(numberAddress, that.numberAddress) && Objects.equals(neighborhood, that.neighborhood) && Objects.equals(stateAddress, that.stateAddress) && Objects.equals(cpf, that.cpf) && Objects.equals(fullName, that.fullName) && Objects.equals(cep, that.cep) && Objects.equals(EUATaxAddress, that.EUATaxAddress) && Objects.equals(profession, that.profession) && Objects.equals(income, that.income) && Objects.equals(moveableAssets, that.moveableAssets) && Objects.equals(realEstateProperties, that.realEstateProperties) && Objects.equals(investments, that.investments) && Objects.equals(retirementFunds, that.retirementFunds) && Objects.equals(otherPatrimonies, that.otherPatrimonies) && Objects.equals(numberDocument, that.numberDocument) && Objects.equals(issuerDocument, that.issuerDocument) && Objects.equals(typeDocument, that.typeDocument) && Objects.equals(backPhotoDocument, that.backPhotoDocument) && Objects.equals(frontPhotoDocument, that.frontPhotoDocument) && Objects.equals(dateBirth, that.dateBirth) && Objects.equals(selfiePhoto, that.selfiePhoto) && Objects.equals(accounts, that.accounts) && Objects.equals(otherNationality, that.otherNationality);
+        ClientDTOV1 that = (ClientDTOV1) o;
+        return Objects.equals(id, that.id) && Objects.equals(email, that.email) && Objects.equals(cellPhoneNumber, that.cellPhoneNumber) && Objects.equals(maritalStatus, that.maritalStatus) && Objects.equals(countryBirth, that.countryBirth) && Objects.equals(cityBirth, that.cityBirth) && Objects.equals(stateBirth, that.stateBirth) && Objects.equals(cityAddress, that.cityAddress) && Objects.equals(additionAddress, that.additionAddress) && Objects.equals(numberAddress, that.numberAddress) && Objects.equals(neighborhood, that.neighborhood) && Objects.equals(stateAddress, that.stateAddress) && Objects.equals(cpf, that.cpf) && Objects.equals(fullName, that.fullName) && Objects.equals(cep, that.cep) && Objects.equals(EUATaxAddress, that.EUATaxAddress) && Objects.equals(profession, that.profession) && Objects.equals(income, that.income) && Objects.equals(moveableAssets, that.moveableAssets) && Objects.equals(realEstateProperties, that.realEstateProperties) && Objects.equals(investments, that.investments) && Objects.equals(retirementFunds, that.retirementFunds) && Objects.equals(otherPatrimonies, that.otherPatrimonies) && Objects.equals(numberDocument, that.numberDocument) && Objects.equals(issuerDocument, that.issuerDocument) && Objects.equals(typeDocument, that.typeDocument) && Objects.equals(backPhotoDocument, that.backPhotoDocument) && Objects.equals(frontPhotoDocument, that.frontPhotoDocument) && Objects.equals(dateBirth, that.dateBirth) && Objects.equals(selfiePhoto, that.selfiePhoto) && Objects.equals(otherNationality, that.otherNationality) && Objects.equals(accounts, that.accounts);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, cellPhoneNumber, maritalStatus, countryBirth, cityBirth, stateBirth, cityAddress, additionAddress, numberAddress, neighborhood, stateAddress, cpf, fullName, cep, EUATaxAddress, profession, income, moveableAssets, realEstateProperties, investments, retirementFunds, otherPatrimonies, numberDocument, issuerDocument, typeDocument, backPhotoDocument, frontPhotoDocument, dateBirth, selfiePhoto, accounts, otherNationality);
+        return Objects.hash(id, email, cellPhoneNumber, maritalStatus, countryBirth, cityBirth, stateBirth, cityAddress, additionAddress, numberAddress, neighborhood, stateAddress, cpf, fullName, cep, EUATaxAddress, profession, income, moveableAssets, realEstateProperties, investments, retirementFunds, otherPatrimonies, numberDocument, issuerDocument, typeDocument, backPhotoDocument, frontPhotoDocument, dateBirth, selfiePhoto, otherNationality, accounts);
     }
 }

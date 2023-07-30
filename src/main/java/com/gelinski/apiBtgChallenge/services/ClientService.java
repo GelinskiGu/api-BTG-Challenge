@@ -1,6 +1,8 @@
 package com.gelinski.apiBtgChallenge.services;
 
+import com.gelinski.apiBtgChallenge.data.dto.v1.ClientDTOV1;
 import com.gelinski.apiBtgChallenge.exceptions.ResourceNotFoundException;
+import com.gelinski.apiBtgChallenge.mapper.ClientMapper;
 import com.gelinski.apiBtgChallenge.models.ClientEntity;
 import com.gelinski.apiBtgChallenge.repositories.ClientEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 @Service
 public class ClientService {
@@ -17,16 +20,21 @@ public class ClientService {
     @Autowired
     ClientEntityRepository repository;
 
-    public ClientEntity create(ClientEntity client) {
-        logger.info("Creating one client! " + client.getCPF());
+    public ClientDTOV1 create(ClientDTOV1 clientDTO) {
+        logger.info("Creating one client!");
 
-        return repository.save(client);
+        ClientEntity clientEntity = ClientMapper.INSTANCE.dtoToEntity(clientDTO);
+        ClientEntity savedClientEntity = repository.save(clientEntity);
+
+        return ClientMapper.INSTANCE.entityToDTO(savedClientEntity);
     }
 
-    public List<ClientEntity> findAll() {
+    public List<ClientDTOV1> findAll() {
         logger.info("Finding all clients!");
 
-        return repository.findAll();
+        List<ClientEntity> clientEntities = repository.findAll();
+
+        return clientEntities.stream().map(ClientMapper.INSTANCE::entityToDTO).collect(Collectors.toList());
     }
 
     public ClientEntity findById(Long id) {

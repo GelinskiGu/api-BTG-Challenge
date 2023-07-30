@@ -18,7 +18,7 @@ public class AccountEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "client_id", nullable = false, referencedColumnName = "id")
     private ClientEntity client;
 
