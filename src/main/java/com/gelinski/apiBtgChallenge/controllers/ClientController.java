@@ -10,7 +10,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -98,19 +97,45 @@ public class ClientController {
     }
 
     @GetMapping(value = "/findByCpf/{cpf}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = "Find Client by CPF", description = "Find a Client in the database by CPF.",
+            tags = { "Client" },
+            responses = {
+                @ApiResponse(description = "Successful Operation", responseCode = "200",
+                        content = @Content(
+                                mediaType = "application/json",
+                                array = @ArraySchema(schema = @Schema(implementation = ClientDTOV1.class))
+                        )),
+                @ApiResponse(description = "Bad Request", responseCode = "400",
+                        content = @Content),
+                @ApiResponse(description = "Not Found", responseCode = "404",
+                        content = @Content),
+                @ApiResponse(description = "Internal Server Error", responseCode = "500",
+                        content = @Content),
+            }
+    )
     public List<ClientDTOV1> findByCpf(@PathVariable(value = "cpf") String cpf) {
         return service.findByCpf(cpf);
     }
 
     @GetMapping(value = "/findByName/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = "Find Client by Name", description = "Find a Client in the database by Name.",
+            tags = { "Client" },
+            responses = {
+                @ApiResponse(description = "Successful Operation", responseCode = "200",
+                        content = @Content(
+                                mediaType = "application/json",
+                                array = @ArraySchema(schema = @Schema(implementation = ClientDTOV1.class))
+                        )),
+                @ApiResponse(description = "Bad Request", responseCode = "400",
+                        content = @Content),
+                @ApiResponse(description = "Not Found", responseCode = "404",
+                        content = @Content),
+                @ApiResponse(description = "Internal Server Error", responseCode = "500",
+                        content = @Content),
+            }
+    )
     public List<ClientDTOV1> findByName(@PathVariable(value = "name") String name) {
         return service.findByFullName(name);
     }
 
-    // TODO: Remover
-    @DeleteMapping(value = "/{id}")
-    public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
-        service.delete(id);
-        return ResponseEntity.noContent().build();
-    }
 }

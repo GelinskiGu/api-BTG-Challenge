@@ -11,7 +11,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -97,14 +96,24 @@ public class AccountController {
     }
 
     @GetMapping(value = "/findByClientId/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = "Find Account by Client ID", description = "Find a Account in the database by Client ID.",
+        tags = { "Account" },
+        responses = {
+            @ApiResponse(description = "Successful Operation", responseCode = "200",
+                content = @Content(
+                    mediaType = "application/json",
+                    array = @ArraySchema(schema = @Schema(implementation = AccountDTOV1.class))
+                )),
+            @ApiResponse(description = "Bad Request", responseCode = "400",
+                content = @Content),
+            @ApiResponse(description = "Not Found", responseCode = "404",
+                content = @Content),
+            @ApiResponse(description = "Internal Server Error", responseCode = "500",
+                content = @Content),
+        }
+    )
     public List<AccountDTOV1> findByClientId(@PathVariable(value = "id") Long id) {
         return service.findByClientId(id);
     }
 
-    // TODO: Remover
-    @DeleteMapping(value = "/{id}")
-    public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
-        service.delete(id);
-        return ResponseEntity.noContent().build();
-    }
 }
