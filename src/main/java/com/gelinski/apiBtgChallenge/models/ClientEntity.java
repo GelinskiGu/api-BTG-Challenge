@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -72,7 +73,8 @@ public class ClientEntity implements Serializable {
     @Column(name = "frontPhotoDocument", nullable = false, length = 255)
     private String frontPhotoDocument;
     @Column(name = "dateBirth", nullable = false, length = 10)
-    private String dateBirth;
+    @Temporal(TemporalType.DATE)
+    private Date dateBirth;
     @Column(name = "selfiePhoto", nullable = false, length = 255)
     private String selfiePhoto;
     @OneToMany(mappedBy = "client")
@@ -307,11 +309,11 @@ public class ClientEntity implements Serializable {
         this.frontPhotoDocument = frontPhotoDocument;
     }
 
-    public String getDateBirth() {
+    public Date getDateBirth() {
         return dateBirth;
     }
 
-    public void setDateBirth(String dateBirth) {
+    public void setDateBirth(Date dateBirth) {
         this.dateBirth = dateBirth;
     }
 

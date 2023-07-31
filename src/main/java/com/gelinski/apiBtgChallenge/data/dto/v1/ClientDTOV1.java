@@ -7,6 +7,7 @@ import com.gelinski.apiBtgChallenge.models.AccountEntity;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -42,7 +43,7 @@ public class ClientDTOV1 implements Serializable {
     private String typeDocument;
     private String backPhotoDocument;
     private String frontPhotoDocument;
-    private String dateBirth;
+    private Date dateBirth;
     private String selfiePhoto;
     private String otherNationality;
     @JsonIgnoreProperties({"client", "transactions"})
@@ -274,11 +275,11 @@ public class ClientDTOV1 implements Serializable {
         this.frontPhotoDocument = frontPhotoDocument;
     }
 
-    public String getDateBirth() {
+    public Date getDateBirth() {
         return dateBirth;
     }
 
-    public void setDateBirth(String dateBirth) {
+    public void setDateBirth(Date dateBirth) {
         this.dateBirth = dateBirth;
     }
 

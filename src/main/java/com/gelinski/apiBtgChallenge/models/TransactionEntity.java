@@ -22,7 +22,8 @@ public class TransactionEntity implements Serializable {
     private AccountEntity account;
 
     @Column(name = "transactionDate", nullable = false)
-    private Date transactionDate = new Date();
+    @Temporal(TemporalType.DATE)
+    private Date transactionDate;
     @Column(name = "amount", nullable = false)
     private BigDecimal amount;
     @Column(name = "transactionType", nullable = false, length = 10)

@@ -26,10 +26,9 @@ public class AccountDTOV1 implements Serializable {
     private String branchNumber;
     private String typeAccount;
     private BigDecimal balance = BigDecimal.ZERO;
-    private Date openingDate = new Date();
+    private Date openingDate;
     private String status;
 
-    // TODO: colocar algo para quando remover
     @JsonIgnoreProperties({"account", "clients"})
     private List<TransactionEntity> transactions;
 

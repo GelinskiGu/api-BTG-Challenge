@@ -33,7 +33,8 @@ public class AccountEntity implements Serializable {
     @Column(name = "balance", nullable = false)
     private BigDecimal balance = BigDecimal.ZERO;
     @Column(name = "openingDate", nullable = false)
-    private Date openingDate = new Date();
+    @Temporal(TemporalType.DATE)
+    private Date openingDate;
     @Column(name = "status", nullable = false, length = 12)
     private String status;
 
