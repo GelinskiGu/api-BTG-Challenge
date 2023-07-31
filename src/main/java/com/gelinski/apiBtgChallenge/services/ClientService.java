@@ -82,6 +82,30 @@ public class ClientService {
         return ClientMapper.INSTANCE.entityToDTO(repository.save(entity));
     }
 
+    public List<ClientDTOV1> findByCpf(String cpf) {
+        logger.info("Finding one client by CPF!");
+
+        List<ClientEntity> foundClients = repository.findByCpfContaining(cpf);
+
+        if (foundClients.isEmpty()) {
+            throw new ResourceNotFoundException("No records found for this CPF");
+        }
+
+        return ClientMapper.INSTANCE.mapToDTO(foundClients);
+    }
+
+    public List<ClientDTOV1> findByFullName(String fullName) {
+        logger.info("Finding one client by full name!");
+
+        List<ClientEntity> foundClients = repository.findByFullNameContaining(fullName);
+
+        if (foundClients.isEmpty()) {
+            throw new ResourceNotFoundException("No records found for this name");
+        }
+
+        return ClientMapper.INSTANCE.mapToDTO(foundClients);
+    }
+
     public void delete(Long id) {
         logger.info("Deleting one client!");
 

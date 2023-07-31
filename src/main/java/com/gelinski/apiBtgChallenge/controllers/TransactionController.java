@@ -79,7 +79,7 @@ public class TransactionController {
         return service.findById(id);
     }
 
-    @GetMapping(value = "/account/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/findTransactionsByAccountId/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Find all Transactions by Account ID", description = "Find all Transactions by Account ID.",
             tags = { "Transaction" },
             responses = {

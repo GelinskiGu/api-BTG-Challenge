@@ -97,6 +97,16 @@ public class ClientController {
         return service.update(client);
     }
 
+    @GetMapping(value = "/findByCpf/{cpf}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<ClientDTOV1> findByCpf(@PathVariable(value = "cpf") String cpf) {
+        return service.findByCpf(cpf);
+    }
+
+    @GetMapping(value = "/findByName/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<ClientDTOV1> findByName(@PathVariable(value = "name") String name) {
+        return service.findByFullName(name);
+    }
+
     // TODO: Remover
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
