@@ -10,6 +10,7 @@ import com.gelinski.apiBtgChallenge.repositories.AccountEntityRepository;
 import com.gelinski.apiBtgChallenge.repositories.ClientEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -70,6 +71,15 @@ public class AccountService {
         AccountEntity savedEntity = accountRepository.save(entity);
 
         return AccountMapper.INSTANCE.entityToDTO(savedEntity);
+    }
+
+    public List<AccountDTOV1> findByClientId(Long id) {
+        logger.info("Finding all accounts by client ID!");
+
+        ClientDTOV1 client = ClientMapper.INSTANCE.entityToDTO(clientRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("No records found for this client ID")));
+
+        return AccountMapper.INSTANCE.mapToDTO(client.getAccounts());
     }
 
     public void delete(Long id) {

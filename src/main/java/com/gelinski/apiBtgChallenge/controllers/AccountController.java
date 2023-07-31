@@ -96,6 +96,11 @@ public class AccountController {
         return service.update(account);
     }
 
+    @GetMapping(value = "/findByClientId/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<AccountDTOV1> findByClientId(@PathVariable(value = "id") Long id) {
+        return service.findByClientId(id);
+    }
+
     // TODO: Remover
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
