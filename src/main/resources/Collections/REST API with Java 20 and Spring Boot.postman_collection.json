@@ -1,0 +1,2152 @@
+{
+	"info": {
+		"_postman_id": "3664ed0f-2bf2-4648-9892-35aaeca44c10",
+		"name": "REST API with Java 20 and Spring Boot",
+		"description": "API REST for BTG Internship Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28244400"
+	},
+	"item": [
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "List all Clients",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/client/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"v1"
+									]
+								},
+								"description": "List all Clients in the database."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"email\": \"<string>\",\n    \"cellPhoneNumber\": \"<string>\",\n    \"maritalStatus\": \"<string>\",\n    \"countryBirth\": \"<string>\",\n    \"cityBirth\": \"<string>\",\n    \"stateBirth\": \"<string>\",\n    \"cityAddress\": \"<string>\",\n    \"additionAddress\": \"<string>\",\n    \"numberAddress\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"stateAddress\": \"<string>\",\n    \"cpf\": \"<string>\",\n    \"fullName\": \"<string>\",\n    \"cep\": \"<string>\",\n    \"profession\": \"<string>\",\n    \"income\": \"<number>\",\n    \"moveableAssets\": \"<number>\",\n    \"realEstateProperties\": \"<number>\",\n    \"investments\": \"<number>\",\n    \"retirementFunds\": \"<number>\",\n    \"otherPatrimonies\": \"<number>\",\n    \"numberDocument\": \"<string>\",\n    \"issuerDocument\": \"<string>\",\n    \"typeDocument\": \"<string>\",\n    \"backPhotoDocument\": \"<string>\",\n    \"frontPhotoDocument\": \"<string>\",\n    \"dateBirth\": \"<dateTime>\",\n    \"selfiePhoto\": \"<string>\",\n    \"otherNationality\": \"<string>\",\n    \"accounts\": [\n      {\n        \"id\": \"<long>\",\n        \"client\": {\n          \"id\": \"<long>\",\n          \"email\": \"<string>\",\n          \"cellPhoneNumber\": \"<string>\",\n          \"maritalStatus\": \"<string>\",\n          \"countryBirth\": \"<string>\",\n          \"cityBirth\": \"<string>\",\n          \"stateBirth\": \"<string>\",\n          \"cityAddress\": \"<string>\",\n          \"additionAddress\": \"<string>\",\n          \"numberAddress\": \"<string>\",\n          \"neighborhood\": \"<string>\",\n          \"stateAddress\": \"<string>\",\n          \"cpf\": \"<string>\",\n          \"fullName\": \"<string>\",\n          \"cep\": \"<string>\",\n          \"profession\": \"<string>\",\n          \"income\": \"<number>\",\n          \"moveableAssets\": \"<number>\",\n          \"realEstateProperties\": \"<number>\",\n          \"investments\": \"<number>\",\n          \"retirementFunds\": \"<number>\",\n          \"otherPatrimonies\": \"<number>\",\n          \"numberDocument\": \"<string>\",\n          \"issuerDocument\": \"<string>\",\n          \"typeDocument\": \"<string>\",\n          \"backPhotoDocument\": \"<string>\",\n          \"frontPhotoDocument\": \"<string>\",\n          \"dateBirth\": \"<dateTime>\",\n          \"selfiePhoto\": \"<string>\",\n          \"accounts\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            }\n          ],\n          \"otherNationality\": \"<string>\",\n          \"euataxAddress\": \"<string>\"\n        },\n        \"bankNumber\": \"<string>\",\n        \"accountNumber\": \"<string>\",\n        \"branchNumber\": \"<string>\",\n        \"typeAccount\": \"<string>\",\n        \"balance\": \"<number>\",\n        \"openingDate\": \"<dateTime>\",\n        \"status\": \"<string>\",\n        \"transactions\": [\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<long>\",\n        \"client\": {\n          \"id\": \"<long>\",\n          \"email\": \"<string>\",\n          \"cellPhoneNumber\": \"<string>\",\n          \"maritalStatus\": \"<string>\",\n          \"countryBirth\": \"<string>\",\n          \"cityBirth\": \"<string>\",\n          \"stateBirth\": \"<string>\",\n          \"cityAddress\": \"<string>\",\n          \"additionAddress\": \"<string>\",\n          \"numberAddress\": \"<string>\",\n          \"neighborhood\": \"<string>\",\n          \"stateAddress\": \"<string>\",\n          \"cpf\": \"<string>\",\n          \"fullName\": \"<string>\",\n          \"cep\": \"<string>\",\n          \"profession\": \"<string>\",\n          \"income\": \"<number>\",\n          \"moveableAssets\": \"<number>\",\n          \"realEstateProperties\": \"<number>\",\n          \"investments\": \"<number>\",\n          \"retirementFunds\": \"<number>\",\n          \"otherPatrimonies\": \"<number>\",\n          \"numberDocument\": \"<string>\",\n          \"issuerDocument\": \"<string>\",\n          \"typeDocument\": \"<string>\",\n          \"backPhotoDocument\": \"<string>\",\n          \"frontPhotoDocument\": \"<string>\",\n          \"dateBirth\": \"<dateTime>\",\n          \"selfiePhoto\": \"<string>\",\n          \"accounts\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            }\n          ],\n          \"otherNationality\": \"<string>\",\n          \"euataxAddress\": \"<string>\"\n        },\n        \"bankNumber\": \"<string>\",\n        \"accountNumber\": \"<string>\",\n        \"branchNumber\": \"<string>\",\n        \"typeAccount\": \"<string>\",\n        \"balance\": \"<number>\",\n        \"openingDate\": \"<dateTime>\",\n        \"status\": \"<string>\",\n        \"transactions\": [\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          }\n        ]\n      }\n    ],\n    \"euataxAddress\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"email\": \"<string>\",\n    \"cellPhoneNumber\": \"<string>\",\n    \"maritalStatus\": \"<string>\",\n    \"countryBirth\": \"<string>\",\n    \"cityBirth\": \"<string>\",\n    \"stateBirth\": \"<string>\",\n    \"cityAddress\": \"<string>\",\n    \"additionAddress\": \"<string>\",\n    \"numberAddress\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"stateAddress\": \"<string>\",\n    \"cpf\": \"<string>\",\n    \"fullName\": \"<string>\",\n    \"cep\": \"<string>\",\n    \"profession\": \"<string>\",\n    \"income\": \"<number>\",\n    \"moveableAssets\": \"<number>\",\n    \"realEstateProperties\": \"<number>\",\n    \"investments\": \"<number>\",\n    \"retirementFunds\": \"<number>\",\n    \"otherPatrimonies\": \"<number>\",\n    \"numberDocument\": \"<string>\",\n    \"issuerDocument\": \"<string>\",\n    \"typeDocument\": \"<string>\",\n    \"backPhotoDocument\": \"<string>\",\n    \"frontPhotoDocument\": \"<string>\",\n    \"dateBirth\": \"<dateTime>\",\n    \"selfiePhoto\": \"<string>\",\n    \"otherNationality\": \"<string>\",\n    \"accounts\": [\n      {\n        \"id\": \"<long>\",\n        \"client\": {\n          \"id\": \"<long>\",\n          \"email\": \"<string>\",\n          \"cellPhoneNumber\": \"<string>\",\n          \"maritalStatus\": \"<string>\",\n          \"countryBirth\": \"<string>\",\n          \"cityBirth\": \"<string>\",\n          \"stateBirth\": \"<string>\",\n          \"cityAddress\": \"<string>\",\n          \"additionAddress\": \"<string>\",\n          \"numberAddress\": \"<string>\",\n          \"neighborhood\": \"<string>\",\n          \"stateAddress\": \"<string>\",\n          \"cpf\": \"<string>\",\n          \"fullName\": \"<string>\",\n          \"cep\": \"<string>\",\n          \"profession\": \"<string>\",\n          \"income\": \"<number>\",\n          \"moveableAssets\": \"<number>\",\n          \"realEstateProperties\": \"<number>\",\n          \"investments\": \"<number>\",\n          \"retirementFunds\": \"<number>\",\n          \"otherPatrimonies\": \"<number>\",\n          \"numberDocument\": \"<string>\",\n          \"issuerDocument\": \"<string>\",\n          \"typeDocument\": \"<string>\",\n          \"backPhotoDocument\": \"<string>\",\n          \"frontPhotoDocument\": \"<string>\",\n          \"dateBirth\": \"<dateTime>\",\n          \"selfiePhoto\": \"<string>\",\n          \"accounts\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            }\n          ],\n          \"otherNationality\": \"<string>\",\n          \"euataxAddress\": \"<string>\"\n        },\n        \"bankNumber\": \"<string>\",\n        \"accountNumber\": \"<string>\",\n        \"branchNumber\": \"<string>\",\n        \"typeAccount\": \"<string>\",\n        \"balance\": \"<number>\",\n        \"openingDate\": \"<dateTime>\",\n        \"status\": \"<string>\",\n        \"transactions\": [\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<long>\",\n        \"client\": {\n          \"id\": \"<long>\",\n          \"email\": \"<string>\",\n          \"cellPhoneNumber\": \"<string>\",\n          \"maritalStatus\": \"<string>\",\n          \"countryBirth\": \"<string>\",\n          \"cityBirth\": \"<string>\",\n          \"stateBirth\": \"<string>\",\n          \"cityAddress\": \"<string>\",\n          \"additionAddress\": \"<string>\",\n          \"numberAddress\": \"<string>\",\n          \"neighborhood\": \"<string>\",\n          \"stateAddress\": \"<string>\",\n          \"cpf\": \"<string>\",\n          \"fullName\": \"<string>\",\n          \"cep\": \"<string>\",\n          \"profession\": \"<string>\",\n          \"income\": \"<number>\",\n          \"moveableAssets\": \"<number>\",\n          \"realEstateProperties\": \"<number>\",\n          \"investments\": \"<number>\",\n          \"retirementFunds\": \"<number>\",\n          \"otherPatrimonies\": \"<number>\",\n          \"numberDocument\": \"<string>\",\n          \"issuerDocument\": \"<string>\",\n          \"typeDocument\": \"<string>\",\n          \"backPhotoDocument\": \"<string>\",\n          \"frontPhotoDocument\": \"<string>\",\n          \"dateBirth\": \"<dateTime>\",\n          \"selfiePhoto\": \"<string>\",\n          \"accounts\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            }\n          ],\n          \"otherNationality\": \"<string>\",\n          \"euataxAddress\": \"<string>\"\n        },\n        \"bankNumber\": \"<string>\",\n        \"accountNumber\": \"<string>\",\n        \"branchNumber\": \"<string>\",\n        \"typeAccount\": \"<string>\",\n        \"balance\": \"<number>\",\n        \"openingDate\": \"<dateTime>\",\n        \"status\": \"<string>\",\n        \"transactions\": [\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"account\": {\n              \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n            },\n            \"transactionDate\": \"<dateTime>\",\n            \"amount\": \"<number>\",\n            \"transactionType\": \"<string>\"\n          }\n        ]\n      }\n    ],\n    \"euataxAddress\": \"<string>\"\n  }\n]"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Client",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"v1"
+									]
+								},
+								"description": "Update a Client in the database by passing in a JSON representation of a Client object."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}"
+								},
+								{
+									"name": "Invalid Client Object",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Create a new Client",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"v1"
+									]
+								},
+								"description": "Create a new Client by passing in a JSON representation of a Client object."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}"
+								},
+								{
+									"name": "Invalid Client Object",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Find Client by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/client/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>"
+										}
+									]
+								},
+								"description": "Find a Client in the database by ID."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"email\": \"<string>\",\n  \"cellPhoneNumber\": \"<string>\",\n  \"maritalStatus\": \"<string>\",\n  \"countryBirth\": \"<string>\",\n  \"cityBirth\": \"<string>\",\n  \"stateBirth\": \"<string>\",\n  \"cityAddress\": \"<string>\",\n  \"additionAddress\": \"<string>\",\n  \"numberAddress\": \"<string>\",\n  \"neighborhood\": \"<string>\",\n  \"stateAddress\": \"<string>\",\n  \"cpf\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"cep\": \"<string>\",\n  \"profession\": \"<string>\",\n  \"income\": \"<number>\",\n  \"moveableAssets\": \"<number>\",\n  \"realEstateProperties\": \"<number>\",\n  \"investments\": \"<number>\",\n  \"retirementFunds\": \"<number>\",\n  \"otherPatrimonies\": \"<number>\",\n  \"numberDocument\": \"<string>\",\n  \"issuerDocument\": \"<string>\",\n  \"typeDocument\": \"<string>\",\n  \"backPhotoDocument\": \"<string>\",\n  \"frontPhotoDocument\": \"<string>\",\n  \"dateBirth\": \"<dateTime>\",\n  \"selfiePhoto\": \"<string>\",\n  \"otherNationality\": \"<string>\",\n  \"accounts\": [\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"client\": {\n        \"id\": \"<long>\",\n        \"email\": \"<string>\",\n        \"cellPhoneNumber\": \"<string>\",\n        \"maritalStatus\": \"<string>\",\n        \"countryBirth\": \"<string>\",\n        \"cityBirth\": \"<string>\",\n        \"stateBirth\": \"<string>\",\n        \"cityAddress\": \"<string>\",\n        \"additionAddress\": \"<string>\",\n        \"numberAddress\": \"<string>\",\n        \"neighborhood\": \"<string>\",\n        \"stateAddress\": \"<string>\",\n        \"cpf\": \"<string>\",\n        \"fullName\": \"<string>\",\n        \"cep\": \"<string>\",\n        \"profession\": \"<string>\",\n        \"income\": \"<number>\",\n        \"moveableAssets\": \"<number>\",\n        \"realEstateProperties\": \"<number>\",\n        \"investments\": \"<number>\",\n        \"retirementFunds\": \"<number>\",\n        \"otherPatrimonies\": \"<number>\",\n        \"numberDocument\": \"<string>\",\n        \"issuerDocument\": \"<string>\",\n        \"typeDocument\": \"<string>\",\n        \"backPhotoDocument\": \"<string>\",\n        \"frontPhotoDocument\": \"<string>\",\n        \"dateBirth\": \"<dateTime>\",\n        \"selfiePhoto\": \"<string>\",\n        \"accounts\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          }\n        ],\n        \"otherNationality\": \"<string>\",\n        \"euataxAddress\": \"<string>\"\n      },\n      \"bankNumber\": \"<string>\",\n      \"accountNumber\": \"<string>\",\n      \"branchNumber\": \"<string>\",\n      \"typeAccount\": \"<string>\",\n      \"balance\": \"<number>\",\n      \"openingDate\": \"<dateTime>\",\n      \"status\": \"<string>\",\n      \"transactions\": [\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"account\": {\n            \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n          },\n          \"transactionDate\": \"<dateTime>\",\n          \"amount\": \"<number>\",\n          \"transactionType\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"euataxAddress\": \"<string>\"\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/client/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/client/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"client",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "List all Accounts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/account/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"v1"
+									]
+								},
+								"description": "List all Accounts in the database."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"bankNumber\": \"<string>\",\n    \"accountNumber\": \"<string>\",\n    \"branchNumber\": \"<string>\",\n    \"typeAccount\": \"<string>\",\n    \"balance\": \"<number>\",\n    \"openingDate\": \"<dateTime>\",\n    \"status\": \"<string>\",\n    \"transactions\": [\n      {\n        \"id\": \"<long>\",\n        \"account\": {\n          \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n        },\n        \"transactionDate\": \"<dateTime>\",\n        \"amount\": \"<number>\",\n        \"transactionType\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"account\": {\n          \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n        },\n        \"transactionDate\": \"<dateTime>\",\n        \"amount\": \"<number>\",\n        \"transactionType\": \"<string>\"\n      }\n    ],\n    \"client_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"bankNumber\": \"<string>\",\n    \"accountNumber\": \"<string>\",\n    \"branchNumber\": \"<string>\",\n    \"typeAccount\": \"<string>\",\n    \"balance\": \"<number>\",\n    \"openingDate\": \"<dateTime>\",\n    \"status\": \"<string>\",\n    \"transactions\": [\n      {\n        \"id\": \"<long>\",\n        \"account\": {\n          \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n        },\n        \"transactionDate\": \"<dateTime>\",\n        \"amount\": \"<number>\",\n        \"transactionType\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"account\": {\n          \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n        },\n        \"transactionDate\": \"<dateTime>\",\n        \"amount\": \"<number>\",\n        \"transactionType\": \"<string>\"\n      }\n    ],\n    \"client_id\": \"<long>\"\n  }\n]"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Account",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/account/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"v1"
+									]
+								},
+								"description": "Update a Account in the database by passing in a JSON representation of a Account object."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}"
+								},
+								{
+									"name": "Invalid Account Object",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Create a new Account",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/account/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"v1"
+									]
+								},
+								"description": "Create a new Account by passing in a JSON representation of a Account object."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}"
+								},
+								{
+									"name": "Invalid Account Object",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Find Account by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/account/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>"
+										}
+									]
+								},
+								"description": "Find a Account in the database by ID."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"bankNumber\": \"<string>\",\n  \"accountNumber\": \"<string>\",\n  \"branchNumber\": \"<string>\",\n  \"typeAccount\": \"<string>\",\n  \"balance\": \"<number>\",\n  \"openingDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"transactions\": [\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"account\": {\n        \"value\": \"<Circular reference to #/components/schemas/AccountEntity detected>\"\n      },\n      \"transactionDate\": \"<dateTime>\",\n      \"amount\": \"<number>\",\n      \"transactionType\": \"<string>\"\n    }\n  ],\n  \"client_id\": \"<long>\"\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete 1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/account/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"account",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/account/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"account",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "List all Transactions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/transaction/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"v1"
+									]
+								},
+								"description": "List all Transactions in the database."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"amount\": \"<number>\",\n    \"transactionType\": \"<string>\",\n    \"account_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"amount\": \"<number>\",\n    \"transactionType\": \"<string>\",\n    \"account_id\": \"<long>\"\n  }\n]"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Create a new Transaction",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"transactionDate\": \"<dateTime>\",\n  \"amount\": \"<number>\",\n  \"transactionType\": \"<string>\",\n  \"account_id\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/transaction/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"v1"
+									]
+								},
+								"description": "Create a new Transaction by passing in a JSON representation of a Transaction object."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"transactionDate\": \"<dateTime>\",\n  \"amount\": \"<number>\",\n  \"transactionType\": \"<string>\",\n  \"account_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"transactionDate\": \"<dateTime>\",\n  \"amount\": \"<number>\",\n  \"transactionType\": \"<string>\",\n  \"account_id\": \"<long>\"\n}"
+								},
+								{
+									"name": "Invalid Transaction Object",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"transactionDate\": \"<dateTime>\",\n  \"amount\": \"<number>\",\n  \"transactionType\": \"<string>\",\n  \"account_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"transactionDate\": \"<dateTime>\",\n  \"amount\": \"<number>\",\n  \"transactionType\": \"<string>\",\n  \"account_id\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Find a Transaction by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/transaction/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>"
+										}
+									]
+								},
+								"description": "Find a Transaction by ID."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"transactionDate\": \"<dateTime>\",\n  \"amount\": \"<number>\",\n  \"transactionType\": \"<string>\",\n  \"account_id\": \"<long>\"\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Find all Transactions by Account ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/transaction/v1/account/:accountId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"v1",
+										"account",
+										":accountId"
+									],
+									"variable": [
+										{
+											"key": "accountId",
+											"value": "<long>"
+										}
+									]
+								},
+								"description": "Find all Transactions by Account ID."
+							},
+							"response": [
+								{
+									"name": "Successful Operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/account/:accountId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												"account",
+												":accountId"
+											],
+											"variable": [
+												{
+													"key": "accountId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"amount\": \"<number>\",\n    \"transactionType\": \"<string>\",\n    \"account_id\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"transactionDate\": \"<dateTime>\",\n    \"amount\": \"<number>\",\n    \"transactionType\": \"<string>\",\n    \"account_id\": \"<long>\"\n  }\n]"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/account/:accountId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												"account",
+												":accountId"
+											],
+											"variable": [
+												{
+													"key": "accountId"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/account/:accountId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												"account",
+												":accountId"
+											],
+											"variable": [
+												{
+													"key": "accountId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/transaction/v1/account/:accountId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transaction",
+												"v1",
+												"account",
+												":accountId"
+											],
+											"variable": [
+												{
+													"key": "accountId"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081"
+		}
+	]
+}
