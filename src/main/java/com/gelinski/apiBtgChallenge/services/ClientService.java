@@ -6,12 +6,12 @@ import com.gelinski.apiBtgChallenge.mapper.ClientMapper;
 import com.gelinski.apiBtgChallenge.models.ClientEntity;
 import com.gelinski.apiBtgChallenge.repositories.ClientEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 @Service
 public class ClientService {
@@ -29,10 +29,12 @@ public class ClientService {
         return ClientMapper.INSTANCE.entityToDTO(savedClientEntity);
     }
 
-    public List<ClientDTOV1> findAll() {
+    public Page<ClientDTOV1> findAll(Pageable pageable) {
         logger.info("Finding all clients!");
 
-        return ClientMapper.INSTANCE.mapToDTO(repository.findAll());
+        var clientPage = repository.findAll(pageable);
+
+        return clientPage.map(ClientMapper.INSTANCE::entityToDTO);
     }
 
     public ClientDTOV1 findById(Long id) {
