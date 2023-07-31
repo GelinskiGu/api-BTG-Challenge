@@ -22,7 +22,7 @@ public class TransactionEntity implements Serializable {
     private AccountEntity account;
 
     @Column(name = "transactionDate", nullable = false)
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date transactionDate;
     @Column(name = "amount", nullable = false)
     private BigDecimal amount;

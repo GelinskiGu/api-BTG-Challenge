@@ -20,7 +20,7 @@ public class ClientEntity implements Serializable {
 
     @Column(name = "email", nullable = false, length = 255)
     private String email;
-    @Column(name = "cellPhoneNumber", nullable = false, length = 15)
+    @Column(name = "cellPhoneNumber", nullable = false, length = 16)
     private String cellPhoneNumber;
     @Column(name = "maritalStatus", nullable = false, length = 10)
     private String maritalStatus;
@@ -28,7 +28,7 @@ public class ClientEntity implements Serializable {
     private String countryBirth;
     @Column(name = "cityBirth", nullable = false, length = 50)
     private String cityBirth;
-    @Column(name = "stateBirth", nullable = false, length = 2)
+    @Column(name = "stateBirth", nullable = false, length = 20)
     private String stateBirth;
     @Column(name = "cityAddress", nullable = false, length = 50)
     private String cityAddress;
@@ -38,7 +38,7 @@ public class ClientEntity implements Serializable {
     private String numberAddress;
     @Column(name = "neighborhood", nullable = false, length = 50)
     private String neighborhood;
-    @Column(name = "stateAddress", nullable = false, length = 2)
+    @Column(name = "stateAddress", nullable = false, length = 20)
     private String stateAddress;
     @Column(name = "cpf", nullable = false, length = 11)
     private String cpf;
@@ -52,15 +52,15 @@ public class ClientEntity implements Serializable {
     private String profession;
     @Column(name = "income", nullable = false, length = 10)
     private BigDecimal income;
-    @Column(name = "moveableAssets", nullable = false)
+    @Column(name = "moveableAssets")
     private BigDecimal moveableAssets = BigDecimal.ZERO;
-    @Column(name = "realEstateProperties", nullable = false)
+    @Column(name = "realEstateProperties")
     private BigDecimal realEstateProperties = BigDecimal.ZERO;
-    @Column(name = "investments", nullable = false)
+    @Column(name = "investments")
     private BigDecimal investments = BigDecimal.ZERO;
-    @Column(name = "retirementFunds", nullable = false)
+    @Column(name = "retirementFunds")
     private BigDecimal retirementFunds = BigDecimal.ZERO;
-    @Column(name = "otherPatrimonies", nullable = false)
+    @Column(name = "otherPatrimonies")
     private BigDecimal otherPatrimonies = BigDecimal.ZERO;
     @Column(name = "numberDocument", nullable = false, length = 11)
     private String numberDocument;

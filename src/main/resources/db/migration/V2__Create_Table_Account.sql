@@ -1,5 +1,3 @@
-USE `btg_challenge_db`;
-
 CREATE TABLE `account` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `account_number` varchar(9) NOT NULL,
@@ -14,5 +12,3 @@ CREATE TABLE `account` (
   KEY `client_id` (`client_id`),
   CONSTRAINT `client_id` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`)
 );
-
-

@@ -1,5 +1,3 @@
-USE `btg_challenge_db`;
-
 CREATE TABLE `transaction` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `amount` decimal(38,2) NOT NULL,
