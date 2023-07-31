@@ -30,6 +30,8 @@ public class TransactionController {
                         content = @Content(schema = @Schema(implementation = TransactionDTOV1.class))),
                 @ApiResponse(description = "Invalid Transaction Object", responseCode = "400",
                         content = @Content),
+                @ApiResponse(description = "Insufficient Funds", responseCode = "403",
+                        content = @Content),
                 @ApiResponse(description = "Internal Server Error", responseCode = "500",
                         content = @Content),
             }

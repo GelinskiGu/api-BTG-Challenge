@@ -2,6 +2,7 @@ package com.gelinski.apiBtgChallenge.services;
 
 import com.gelinski.apiBtgChallenge.data.dto.v1.AccountDTOV1;
 import com.gelinski.apiBtgChallenge.data.dto.v1.TransactionDTOV1;
+import com.gelinski.apiBtgChallenge.exceptions.NotAllowedRequestException;
 import com.gelinski.apiBtgChallenge.exceptions.ResourceNotFoundException;
 import com.gelinski.apiBtgChallenge.mapper.AccountMapper;
 import com.gelinski.apiBtgChallenge.mapper.TransactionMapper;
@@ -31,11 +32,18 @@ public class TransactionService {
         AccountDTOV1 account = AccountMapper.INSTANCE.entityToDTO(accountRepository.findById(transaction.getAccountId()).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this account ID")));
 
+        if(account.getStatus().equals("Disable")) {
+            throw new NotAllowedRequestException("Account is disabled");
+        }
         if(transaction.getTransactionType().equals("D")) {
             account.setBalance(account.getBalance().add(transaction.getAmount()));
-        }
-        if(transaction.getTransactionType().equals("W")) {
+        } else if(transaction.getTransactionType().equals("W")) {
+            if(account.getBalance().compareTo(transaction.getAmount()) < 0) {
+                throw new NotAllowedRequestException("Insufficient funds");
+            }
             account.setBalance(account.getBalance().subtract(transaction.getAmount()));
+        } else {
+            throw new IllegalArgumentException("Invalid transaction type");
         }
 
         List<TransactionEntity> transactions = account.getTransactions();
