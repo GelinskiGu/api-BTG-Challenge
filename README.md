@@ -139,7 +139,7 @@ No diretório *src/main/resources/Collections* estão as collections.json e envi
 No diretório *src/main/java/exceptions* existem três classes de exceção para retornar erros 400, 403 ou 404 para a API detalhar de forma mais clara os erros ocorridos durante as requisições.
 
 ## População do Banco de Dados via Mockaroo <a name="mockaroo"></a>
-Para uma testagem mais realista das funcionalidades da API, foi feito uma injeção de dados com dados fictícios utilizando a ferramenta Mockaroo. Através dessa ferramenta, foi feito o cadastro de 500 clientes diferentes e, também, o cadastro de 500 contas diferentes, sendo que para as contas foi feito também um tratamento de dados via querys SQL para que não exista um cliente com mais de 2 contas ("Investiment" e "Checking") e, também, para que não tenham contas do mesmo tipo.
+Para simular uma testagem mais realista das funcionalidades da API, foram utilizados dados fictícios gerados por meio da ferramenta Mockaroo. Essa abordagem permitiu a criação de um conjunto diversificado de informações de clientes e contas, tornando possível testar a API em cenários mais variados.
 
 ### Dados Gerados
 Foram criados 500 clientes diferentes, cada um com informações pessoais e financeiras únicas. Além disso, foram criadas 500 contas distintas, garantindo que cada conta estivesse vinculada a um cliente específico.
@@ -147,9 +147,9 @@ Foram criados 500 clientes diferentes, cada um com informações pessoais e fina
 ### Tratamento de Dados
 Para garantir a integridade dos dados gerados, foi aplicado um tratamento adicional aos registros das contas. As seguintes regras foram implementadas:
 
-1. Limite de duas contas por cliente: Cada cliente foi associado a no máximo duas contas (por exemplo, "Investimento" e "Checking").
+1. Limite de duas contas por cliente: Cada cliente foi associado a no máximo duas contas (por exemplo, "Investment" e "Checking").
 
-2. Tipos de conta únicos: Não foram permitidas contas do mesmo tipo (por exemplo, não há dois registros "Investimento" para o mesmo cliente).
+2. Tipos de conta únicos: Não foram permitidas contas do mesmo tipo (por exemplo, não há dois registros "Investment" para o mesmo cliente).
 
 Essas medidas de tratamento de dados ajudaram a criar um conjunto de dados mais realista e consistente para a avaliação da API.
 
